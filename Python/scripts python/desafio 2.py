@@ -1,0 +1,5 @@
+print ('----desafio 2----')
+dia = input ('dia:')
+mes = input ('mês:')
+ano = input ('ano:')
+print ('voce nasceu no dia',dia,'de',mes,'de',ano,', certo?')

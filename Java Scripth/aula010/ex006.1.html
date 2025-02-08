@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arvore DOM- eventos(html)</title>
+    <style>
+        div#testebotao {
+            font: normal 15pt Arial;
+            background: green;
+            color: white;
+            height: 200px;
+            width: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="testebotao" onclick="clicou()" onmouseout="sair()" onmouseenter="entrar()">
+        interaja...
+    </div>
+    <script>
+        var botao = window.document.getElementById('testebotao')
+
+        function entrar() {
+            botao.innerText = 'Entrou'
+        }
+        function sair() {
+            botao.innerText = 'Saiu'
+            botao.style.background = 'green'
+        }
+        function clicou() {
+            botao.innerText = 'Clicou'
+            botao.style.background = 'red'
+        }
+    </script>
+</body>
+</html>

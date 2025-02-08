@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voce é estrangeiro?</title>
+</head>
+<body>
+    <h1>Digite o Seu pais de origem</h1>
+    Pais = <input type="text" id="pais"> 
+    <input type="button" value="Validação" onclick="validar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function validar() {
+            var txtp = window.document.getElementById('pais')
+            var res = window.document.getElementById('res')
+            var pais = txtp.value
+            res.innerHTML = `<p>Voce Mora no <strong>${pais}</strong></p>`
+            if (pais == 'Brasil'){
+                res.innerHTML += '<p>Voce é <strong>NATIVO</strong></p>'
+            } else {
+                res.innerHTML += `<p>Voce é <strong>ESTRANGEIRO</strong><p>`
+            }
+        }
+    </script>
+</body>
+</html>
